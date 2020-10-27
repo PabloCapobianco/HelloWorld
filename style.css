@@ -6,6 +6,7 @@ body {
 .pantalla {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(35%, 45%) auto;
 }

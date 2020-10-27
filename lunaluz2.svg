@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="23.541199mm"
+   height="23.541281mm"
+   viewBox="0 0 23.541198 23.541281"
+   version="1.1"
+   id="svg4965"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="lunaluz2.svg">
+  <defs
+     id="defs4959" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.8259318"
+     inkscape:cx="152.2522"
+     inkscape:cy="89.404817"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1360"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4962">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.7848004,-5.0662925)">
+    <path
+       d="M 15.467292,5.066375 A 11.770739,11.770739 0 0 0 3.7848009,16.837232 11.770739,11.770739 0 0 0 15.555142,28.607573 11.770739,11.770739 0 0 0 27.325999,16.837232 11.770739,11.770739 0 0 0 26.550852,12.636455 5.2577171,4.8478955 0 0 1 23.737072,13.388864 5.2577171,4.8478955 0 0 1 18.47951,8.5410982 5.2577171,4.8478955 0 0 1 19.453094,5.7304171 11.770739,11.770739 0 0 0 15.555142,5.066375 a 11.770739,11.770739 0 0 0 -0.08785,0 z"
+       style="fill:#9acff1;fill-opacity:1;stroke:#907aa9;stroke-width:0;stroke-linejoin:round;opacity:1"
+       id="path891" />
+  </g>
+</svg>

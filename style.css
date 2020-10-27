@@ -1,0 +1,282 @@
+body {
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.pantalla {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: minmax(35%, 45%) auto;
+}
+
+.presentacion {
+  background: #1c1f1fff;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: minmax(0%, 45%) auto;
+}
+
+.texto {
+  scale: 0.8;
+  translate: 0vw 10vh;
+  grid-column: 2/3;
+  z-index: 4;
+}
+
+.animacion {
+  display: grid;
+  background: linear-gradient(to top,  rgb(124, 179, 189), rgb(19, 93, 100));
+  justify-items: center;
+}
+
+.luna {
+  position: absolute;
+  height: 9.5vw;
+  opacity: 0.9;
+  translate: 0 22vh;
+  z-index: 3;
+}
+
+.lunaluz {
+  position: absolute;
+  translate: -0.7vw 20.6vh;
+  height: 15vw;
+  filter: blur(2px);
+  opacity: 0.8;
+  rotate: 8deg;
+  z-index: 2;
+}
+
+.lunaluz.b {opacity: 0.065;}
+
+
+.nube {
+  height: 6.5vw;
+  opacity: 0.65;
+  animation-name: nube;
+  animation-duration: 70s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  filter: blur(0.5px);
+  z-index: 4;
+}
+
+@keyframes nube {
+0% {translate: 30vw 21vh;}
+85% {translate: -40vw 21vh;}
+100% {translate: -40vw 21.5vh;}
+}
+
+.mesa {
+  position: absolute;
+  translate: 3vw 60vh;
+  height: 18vw;
+}
+
+.panza {
+  animation-name: panza;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+  z-index: 7;
+}
+
+@keyframes  panza {
+  0% {scale: 1;}
+  22% {scale: 1.06;}
+  30% {scale: 1.06;}
+  52% {scale: 1;}
+}
+
+.cuadrado {
+  position: absolute;
+  translate: 41.5vw 0;
+  height: 100.2vh;
+  z-index: 3;
+}
+
+.mesa.humo {
+  animation-name: humo;
+  animation-duration: 5.5s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@keyframes humo {
+  0% {opacity: 0;}
+  13% {opacity: 1;}
+  26% {opacity: 0;}
+}
+
+.humo.a {
+  animation-delay: -0.5s;
+}
+
+.humo.b {
+  animation-delay: -0.25s;
+}
+
+path:nth-child(3){
+  fill: #4b87be;
+}
+
+.estrella_1 {
+  height: 1.1vmin;
+  border-radius: 65%;
+  background: rgba(255, 180, 218, 0.445) ;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  translate: -20vw 18vh;
+  rotate: 70deg;
+}
+
+@keyframes brillo {
+  0% {
+    box-shadow:  0 0 0.37vmin 0.37vmin rgba(255, 180, 218, 0.555);
+    background: rgba(255, 180, 218, 0.479) ;
+    opacity: 1;
+    scale: 1;
+  }
+
+  40% {
+    box-shadow:  0 0 0.15vmin 0.15vmin rgba(255, 180, 218, 0.5);
+    background: rgba(255, 180, 218, 0.384) ;
+    opacity: 0.70;
+    scale: 0.8;
+  }
+
+  80% {
+    box-shadow:  0 0 0.37vmin 0.37vmin rgba(255, 180, 218, 0.555);
+    background: rgba(255, 180, 218, 0.479) ;
+    opacity: 1;
+    scale: 1;
+  }
+
+  100% {
+    box-shadow:  0 0 0.37vmin 0.37vmin rgba(255, 180, 218, 0.555);
+    background: rgba(255, 180, 218, 0.479);
+    opacity: 1;
+    scale: 1;
+  }
+
+}
+
+.estrella_2 {
+  translate: 16vw 5vh;
+  height: 1vmin;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -1.11s;
+  rotate: 105deg;
+  animation-delay: -8.88s;
+  border-radius: 65%;
+}
+
+.estrella_3 {
+  height: 1.1vmin;
+  translate: 10vw -10vh;
+  rotate: 35deg;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -6.66s;
+  rotate: 250deg;
+  border-radius: 65%;
+}
+
+.estrella_4 {
+  translate: -3.7vw 3vh;
+  height: 0.8vmin;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -6.66s;
+  rotate: 200deg;
+  border-radius: 65%;
+}
+
+.estrella_5 {
+  translate: -20vw -23vh;
+  height: 0.9vmin;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -5.55s;
+  rotate: 200deg;
+  border-radius: 65%;
+}
+
+.estrella_6 {
+  translate: 15vw -17vh;
+  height: 1vmin;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -4.44s;
+  rotate: 200deg;
+  border-radius: 65%;
+}
+
+.estrella_7 {
+  translate: -15vw -28vh;
+  height: 0.8vmin;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -4.44s;
+  rotate: 200deg;
+  border-radius: 65%;
+}
+
+.estrella_8 {
+  translate: -13vw -45vh;
+  height: 1vmin;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -7.77s;
+  rotate: 170deg;
+  border-radius: 65%;
+}
+
+.estrella_9 {
+  translate: -5vw -75vh;
+  height: 0.8vmin;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -3.33s;
+  rotate: 200deg;
+}
+
+.estrella_10 {
+  translate: 13.5vw -82vh;
+  height: 0.8vmin;
+  animation-name: brillo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: -3.33s;
+  rotate: 250deg;
+  border-radius: 65%;
+}
+
+@media only screen and (min-width: 768px)
+{
+.texto {
+  scale: 1.15;
+  translate: 0vw 12vh;
+  }
+
+.lunaluz {
+  position: absolute;
+  translate: -0.7vw 19vh;
+  height: 15vw;
+  filter: blur(2px);
+  opacity: 0.8;
+  rotate: 8deg;
+  z-index: 2;
+  }
+}

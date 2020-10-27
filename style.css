@@ -1,6 +1,7 @@
 body {
-  overflow-x: hidden;
   height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .pantalla {
@@ -93,7 +94,7 @@ body {
 .cuadrado {
   position: absolute;
   translate: 41.5vw 0;
-  height: 100.2vh;
+  height: 100vh;
   z-index: 3;
 }
 

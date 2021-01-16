@@ -1,7 +1,7 @@
 body {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .pantalla {
@@ -13,18 +13,53 @@ body {
 }
 
 .presentacion {
-  background: #1c1f1fff;
+  background: #000000ff;
   z-index: 5;
   display: grid;
-  grid-template-columns: minmax(0%, 45%) auto;
+  grid-template-rows: 15% auto 15%;
 }
 
-.texto {
-  scale: 0.8;
-  translate: 0vw 10vh;
-  grid-column: 2/3;
-  z-index: 4;
-}
+.encabezado {
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 3vmin;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 0.3fr 1fr;
+  margin: auto auto auto 20%;
+  }
+
+  .español {
+  color: rgb(255, 152, 215);
+  }
+
+  .english:hover {
+    cursor: pointer;
+    }
+  
+  .español:hover {
+    cursor: pointer;
+    }
+
+  .texto {
+  color: white;
+  margin: 8% auto auto 12%;
+  font-family: 'Raleway';
+  font-size: 5.3vmin;
+  text-align: left;
+  z-index: 8;
+  white-space: nowrap;
+  }
+
+  .footer {
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 2.8vmin;
+  text-align: center;
+  margin: auto auto 20% 12%;
+  color: rgb(160, 255, 239);
+  z-index: 8;
+  }
 
 .animacion {
   display: grid;
@@ -36,64 +71,74 @@ body {
   position: absolute;
   height: 9.5vw;
   opacity: 0.9;
-  translate: 0 22vh;
+  -webkit-transform: translate(23vw, 20.4vh);
+  -moz-transform: translate(0.5vw, 21.5vh);
   z-index: 3;
 }
 
 .lunaluz {
   position: absolute;
-  translate: -0.7vw 20.6vh;
+  -webkit-transform: translate(20vw, 17vh);
+  -moz-transform: translate(0.1vw, 19.7vh);
   height: 15vw;
   filter: blur(2px);
   opacity: 0.8;
-  rotate: 8deg;
   z-index: 2;
 }
-
-.lunaluz.b {opacity: 0.065;}
-
 
 .nube {
   height: 6.5vw;
   opacity: 0.65;
   animation-name: nube;
-  animation-duration: 70s;
+  animation-duration: 67s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   filter: blur(0.5px);
   z-index: 4;
 }
 
+
 @keyframes nube {
-0% {translate: 30vw 21vh;}
-85% {translate: -40vw 21vh;}
-100% {translate: -40vw 21.5vh;}
+0%   {-webkit-transform: translate(40vw, 28vh);
+      -moz-transform:    translate(40vw, 21vh);}
+85%  {-webkit-transform: translate(-40vw, 28vh);
+      -moz-transform:    translate(-40vw, 21vh);}
+100% {-webkit-transform: translate(-40vw, 28vh);
+      -moz-transform:    translate(-40vw, 21vh);}
 }
 
 .mesa {
   position: absolute;
-  translate: 3vw 60vh;
+  -webkit-transform: translate(15vw, 62vh);
+  -moz-transform: translate(3vw, 60vh);
   height: 18vw;
 }
 
 .panza {
   animation-name: panza;
-  animation-duration: 10s;
+  animation-duration: 9s;
   animation-iteration-count: infinite;
-  animation-delay: 3s;
+  animation-delay: 0s;
   z-index: 7;
+  -webkit-transform: translate(14.2vw, 62vh);
+  -moz-transform: translate(2.7vw, 60vh);
 }
 
 @keyframes  panza {
-  0% {scale: 1;}
-  22% {scale: 1.06;}
-  30% {scale: 1.06;}
-  52% {scale: 1;}
+  0%  {-webkit-transform: scale(1) translate(14.2vw, 62vh);
+       -moz-transform: scale(1) translate(2.7vw, 60vh);}
+  22% {-webkit-transform: scale(1.055) translate(14.2vw, 58.7vh);
+       -moz-transform: scale(1.054) translate(2.7vw, 56.8vh);}
+  30% {-webkit-transform: scale(1.055) translate(14.2vw, 58.8vh);
+       -moz-transform: scale(1.054) translate(2.7vw, 56.8vh);}
+  55% {-webkit-transform: scale(1) translate(14.2vw, 62vh);
+       -moz-transform: scale(1) translate(2.7vw, 60vh);}
 }
 
 .cuadrado {
   position: absolute;
-  translate: 41.5vw 0;
+  -webkit-transform: scaleY(1.001) translate(41.5vw, 0vh);
+  -moz-transform: scaleY(1.001) translate(41.5vw, 0vh);
   height: 100vh;
   z-index: 3;
 }
@@ -130,51 +175,20 @@ path:nth-child(3){
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
-  translate: -20vw 18vh;
-  rotate: 70deg;
-}
-
-@keyframes brillo {
-  0% {
-    box-shadow:  0 0 0.37vmin 0.37vmin rgba(255, 180, 218, 0.555);
-    background: rgba(255, 180, 218, 0.479) ;
-    opacity: 1;
-    scale: 1;
-  }
-
-  40% {
-    box-shadow:  0 0 0.15vmin 0.15vmin rgba(255, 180, 218, 0.5);
-    background: rgba(255, 180, 218, 0.384) ;
-    opacity: 0.70;
-    scale: 0.8;
-  }
-
-  80% {
-    box-shadow:  0 0 0.37vmin 0.37vmin rgba(255, 180, 218, 0.555);
-    background: rgba(255, 180, 218, 0.479) ;
-    opacity: 1;
-    scale: 1;
-  }
-
-  100% {
-    box-shadow:  0 0 0.37vmin 0.37vmin rgba(255, 180, 218, 0.555);
-    background: rgba(255, 180, 218, 0.479);
-    opacity: 1;
-    scale: 1;
-  }
-
+  -webkit-transform: translate(-20vw, 10vh) rotate(70deg) scale(1.2);
+  -moz-transform: translate(-20vw, 10vh) scale(1.2);
 }
 
 .estrella_2 {
-  translate: 16vw 5vh;
   height: 1vmin;
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -1.11s;
-  rotate: 105deg;
   animation-delay: -8.88s;
   border-radius: 65%;
+  -webkit-transform: translate(18vw, 5vh) rotate(180deg) scale(1.15);
+  -moz-transform: translate(17vw, 7vh) scale(1.15);
 }
 
 .estrella_3 {
@@ -185,100 +199,205 @@ path:nth-child(3){
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -6.66s;
-  rotate: 250deg;
   border-radius: 65%;
+  -webkit-transform: translate(10vw, -10vh) rotate(250deg) scale(1.12);
+  -moz-transform: translate(0vh, 0vw) scale(1.12);
 }
 
 .estrella_4 {
-  translate: -3.7vw 3vh;
   height: 0.8vmin;
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -6.66s;
-  rotate: 200deg;
   border-radius: 65%;
+  -webkit-transform: translate(-3.7vw, 3vh) rotate(200deg) scale(1.18);
+  -moz-transform: translate(-5vw, 3vh) scale(1.18);
 }
 
 .estrella_5 {
-  translate: -20vw -23vh;
   height: 0.9vmin;
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -5.55s;
-  rotate: 200deg;
+  -webkit-transform: translate(-16vw, -35vh) rotate(170deg) scale(1.21);
+  -moz-transform: translate(-16vw, -35vh) scale(1.21);
   border-radius: 65%;
 }
 
 .estrella_6 {
-  translate: 15vw -17vh;
   height: 1vmin;
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -4.44s;
-  rotate: 200deg;
+  -webkit-transform: translate(12vw, -17vh) scale(1.14);
+  -moz-transform: translate(15vw, -15vh) rotate(100deg) scale(1.14);
   border-radius: 65%;
 }
 
 .estrella_7 {
-  translate: -15vw -28vh;
   height: 0.8vmin;
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -4.44s;
-  rotate: 200deg;
+  -webkit-transform: translate(-15vw, -28vh) rotate(100deg) scale(1.18);
+  -moz-transform: translate(-15vw, -28vh) scale(1.18);
   border-radius: 65%;
 }
 
 .estrella_8 {
-  translate: -13vw -45vh;
   height: 1vmin;
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -7.77s;
-  rotate: 170deg;
+  -webkit-transform: translate(-10vw, -55vh) rotate(80deg) scale(1.14);
+  -moz-transform: translate(-9vw, -55vh) scale(1.14);
   border-radius: 65%;
 }
 
 .estrella_9 {
-  translate: -5vw -75vh;
   height: 0.8vmin;
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -3.33s;
-  rotate: 200deg;
+  -webkit-transform: translate(-5vw, -75vh) rotate(220deg) scale(1.18);
+  -moz-transform: translate(-5vw, -75vh) scale(1.18);
 }
 
 .estrella_10 {
-  translate: 13.5vw -82vh;
   height: 0.8vmin;
   animation-name: brillo;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-delay: -3.33s;
-  rotate: 250deg;
+  -webkit-transform: translate(13.5vw, -82vh) scale(1.16);
+  -moz-transform: translate(10vw, -82vh) scale(1.16);
   border-radius: 65%;
 }
 
-@media only screen and (min-width: 768px)
-{
-.texto {
-  scale: 1.15;
-  translate: 0vw 12vh;
+@keyframes brillo {
+  0% {
+    box-shadow:  0 0 0.42vmin 0.42vmin rgba(255, 180, 218, 0.555);
+    background: rgba(255, 180, 218, 0.479) ;
+    opacity: 1;
   }
 
+  40% {
+    box-shadow:  0 0 0.16vmin 0.16vmin rgba(255, 180, 218, 0.5);
+    background: rgba(255, 180, 218, 0.384) ;
+    opacity: 0.70;
+  }
+
+  80% {
+    box-shadow:  0 0 0.42vmin 0.42vmin rgba(255, 180, 218, 0.555);
+    background: rgba(255, 180, 218, 0.479) ;
+    opacity: 1;
+  }
+
+  100% {
+    box-shadow:  0 0 0.42vmin 0.42vmin rgba(255, 180, 218, 0.555);
+    background: rgba(255, 180, 218, 0.479);
+    opacity: 1;
+  }
+
+}
+
+
+@media only screen and (min-width: 490px) {
+  .texto {
+    font-size: 5vmin;  
+  }
+
+  .footer {
+    font-size: 2.3vmin;
+  }
+  .mesa {
+    -webkit-transform: translate(8.7vw, 62vh);
+    -moz-transform: translate(2.3vw, 60vh);
+    height: 20.5vw;
+  }
+  
+  .panza {
+    -webkit-transform: translate(8.5vw, 62vh);
+    -moz-transform: translate(2.6vw, 60.2vh);
+    animation-duration: 9s;
+  }
+  @keyframes  panza {
+  0%  {-webkit-transform: scale(1) translate(8.5vw, 62vh);
+       -moz-transform: scale(1) translate(2.6vw, 60.2vh);}
+  22% {-webkit-transform: scale(1.055) translate(8.5vw, 58.8vh);
+       -moz-transform: scale(1.054) translate(2.6vw, 56.8vh);}
+  30% {-webkit-transform: scale(1.055) translate(8.5vw, 58.8vh);
+       -moz-transform: scale(1.054) translate(2.6vw, 57vh);}
+  55% {-webkit-transform: scale(1) translate(8.5vw, 62vh);
+       -moz-transform: scale(1) translate(2.6vw, 60.2vh);}
+}
+}
+
+@media only screen and (min-width: 550px)
+{
+  .texto {
+    font-size: 4.5vmin; 
+    margin: 0% auto auto 20%;      
+    }
+  .luna {
+    -webkit-transform: translate(23vw, 24vh);
+    -moz-transform: translate(0.5vw, 21.5vh);
+  }
+  .lunaluz {
+    -webkit-transform: translate(20vw, 22.2vh);
+  }
+}
+
+@media only screen and (min-width: 600px)
+{
 .lunaluz {
-  position: absolute;
-  translate: -0.7vw 19vh;
-  height: 15vw;
-  filter: blur(2px);
-  opacity: 0.8;
-  rotate: 8deg;
-  z-index: 2;
+  -webkit-transform: translate(20vw, 22.7vh);
+}
+.texto {
+  font-size: 4vmin;  
+  }
+.encabezado {
+  font-size: 2.5vmin;
+  margin: auto auto auto 35%;
+  }
+}
+
+@media only screen and (min-width: 1100px)
+{
+.mesa {
+  height: 32.5vmin;
+  }
+}
+.lunaluz {
+  -webkit-transform: translate(20vw, 19vh);
+  -moz-transform: translate(0.1vw, 17vh);
+}
+@media only screen and (min-width: 1200px)
+{
+  .mesa {
+    -webkit-transform: translate(12vw, 62vh);
+    -moz-transform: translate(2vw, 60vh);
+  }
+  
+  .panza {
+    -webkit-transform: translate(11.7vw, 62vh);
+    -moz-transform: translate(2vw, 60vh);
+  }
+ 
+  @keyframes  panza {
+    0%  {-webkit-transform: scale(1) translate(11.7vw, 62vh);
+         -moz-transform: scale(1) translate(2vw, 60vh);}
+    22% {-webkit-transform: scale(1.055) translate(11.7vw, 58.6vh);
+         -moz-transform: scale(1.054) translate(2vw, 56.8vh);}
+    30% {-webkit-transform: scale(1.055) translate(11.7vw, 58.6vh);
+         -moz-transform: scale(1.054) translate(2vw, 56.8vh);}
+    55% {-webkit-transform: scale(1) translate(11.7vw, 62vh);
+         -moz-transform: scale(1) translate(2vw, 60vh);}
   }
 }

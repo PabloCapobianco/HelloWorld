@@ -27,21 +27,21 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 0.3fr 1fr;
   margin: auto auto auto 20%;
-  }
+}
 
-  .español {
+.español {
   color: rgb(255, 152, 215);
-  }
+}
 
-  .english:hover {
-    cursor: pointer;
-    }
+.english:hover {
+  cursor: pointer
+}
   
-  .español:hover {
-    cursor: pointer;
-    }
+.español:hover {
+  cursor: pointer;
+}
 
-  .texto {
+.texto {
   color: white;
   margin: 8% auto auto 12%;
   font-family: 'Raleway';
@@ -49,7 +49,7 @@ body {
   text-align: left;
   z-index: 8;
   white-space: nowrap;
-  }
+}
 
   .footer {
   color: white;
@@ -69,21 +69,11 @@ body {
 
 .luna {
   position: absolute;
-  height: 9.5vw;
+  width: 20%;
   opacity: 0.9;
-  -webkit-transform: translate(23vw, 20.4vh);
-  -moz-transform: translate(0.5vw, 21.5vh);
+  -webkit-transform: translate(21vw, 16vh);
+  -moz-transform: translate(0.5vw, 20.5vh);
   z-index: 3;
-}
-
-.lunaluz {
-  position: absolute;
-  -webkit-transform: translate(20vw, 17vh);
-  -moz-transform: translate(0.1vw, 19.7vh);
-  height: 15vw;
-  filter: blur(2px);
-  opacity: 0.8;
-  z-index: 2;
 }
 
 .nube {
@@ -100,18 +90,18 @@ body {
 
 @keyframes nube {
 0%   {-webkit-transform: translate(40vw, 28vh);
-      -moz-transform:    translate(40vw, 21vh);}
+      -moz-transform:    translate(40vw, 22vh);}
 85%  {-webkit-transform: translate(-40vw, 28vh);
-      -moz-transform:    translate(-40vw, 21vh);}
+      -moz-transform:    translate(-40vw, 22vh);}
 100% {-webkit-transform: translate(-40vw, 28vh);
-      -moz-transform:    translate(-40vw, 21vh);}
+      -moz-transform:    translate(-40vw, 22vh);}
 }
 
 .mesa {
   position: absolute;
-  -webkit-transform: translate(15vw, 62vh);
+  -webkit-transform: translate(16vw, 62vh);
   -moz-transform: translate(3vw, 60vh);
-  height: 18vw;
+  width: 32%;
 }
 
 .panza {
@@ -120,20 +110,22 @@ body {
   animation-iteration-count: infinite;
   animation-delay: 0s;
   z-index: 7;
-  -webkit-transform: translate(14.2vw, 62vh);
-  -moz-transform: translate(2.7vw, 60vh);
+  -webkit-transform: translate(15vw, 62vh);
+  -moz-transform: translate(3vw, 60vh);
 }
 
 @keyframes  panza {
-  0%  {-webkit-transform: scale(1) translate(14.2vw, 62vh);
-       -moz-transform: scale(1) translate(2.7vw, 60vh);}
+  0%  {-webkit-transform: scale(1) translate(15vw, 62vh);
+       -moz-transform: scale(1) translate(3vw, 60vh);}
   22% {-webkit-transform: scale(1.055) translate(14.2vw, 58.7vh);
-       -moz-transform: scale(1.054) translate(2.7vw, 56.8vh);}
+       -moz-transform: scale(1.054) translate(2.8vw, 56.8vh);}
   30% {-webkit-transform: scale(1.055) translate(14.2vw, 58.8vh);
-       -moz-transform: scale(1.054) translate(2.7vw, 56.8vh);}
-  55% {-webkit-transform: scale(1) translate(14.2vw, 62vh);
-       -moz-transform: scale(1) translate(2.7vw, 60vh);}
+       -moz-transform: scale(1.054) translate(2.8vw, 56.8vh);}
+  55% {-webkit-transform: scale(1) translate(15vw, 62vh);
+       -moz-transform: scale(1) translate(3vw, 60vh);}
 }
+
+
 
 .cuadrado {
   position: absolute;
@@ -316,26 +308,6 @@ path:nth-child(3){
   .footer {
     font-size: 2.3vmin;
   }
-  .mesa {
-    -webkit-transform: translate(8.7vw, 62vh);
-    -moz-transform: translate(2.3vw, 60vh);
-    height: 20.5vw;
-  }
-  
-  .panza {
-    -webkit-transform: translate(8.5vw, 62vh);
-    -moz-transform: translate(2.6vw, 60.2vh);
-    animation-duration: 9s;
-  }
-  @keyframes  panza {
-  0%  {-webkit-transform: scale(1) translate(8.5vw, 62vh);
-       -moz-transform: scale(1) translate(2.6vw, 60.2vh);}
-  22% {-webkit-transform: scale(1.055) translate(8.5vw, 58.8vh);
-       -moz-transform: scale(1.054) translate(2.6vw, 56.8vh);}
-  30% {-webkit-transform: scale(1.055) translate(8.5vw, 58.8vh);
-       -moz-transform: scale(1.054) translate(2.6vw, 57vh);}
-  55% {-webkit-transform: scale(1) translate(8.5vw, 62vh);
-       -moz-transform: scale(1) translate(2.6vw, 60.2vh);}
 }
 }
 
@@ -345,59 +317,47 @@ path:nth-child(3){
     font-size: 4.5vmin; 
     margin: 0% auto auto 20%;      
     }
-  .luna {
-    -webkit-transform: translate(23vw, 24vh);
-    -moz-transform: translate(0.5vw, 21.5vh);
-  }
-  .lunaluz {
-    -webkit-transform: translate(20vw, 22.2vh);
-  }
 }
 
 @media only screen and (min-width: 600px)
 {
-.lunaluz {
-  -webkit-transform: translate(20vw, 22.7vh);
-}
-.texto {
+  .texto {
   font-size: 4vmin;  
   }
-.encabezado {
+  .encabezado {
   font-size: 2.5vmin;
   margin: auto auto auto 35%;
   }
+  .luna {
+    width: 17%;
+    -webkit-transform: translate(20vw, 16vh);
+    -moz-transform: translate(2vw, 16vh);
+  }
+  .mesa {
+    -webkit-transform: translate(12vw, 60vh);
+    -moz-transform: translate(1vw, 60vh);
+  }
+  .panza {
+    -webkit-transform: translate(12vw, 60vh);
+    -moz-transform: translate(1vw, 60vh);
+  }
+
+  @keyframes  panza {
+    0%  {-webkit-transform: scale(1) translate(12vw, 60vh);
+         -moz-transform: scale(1) translate(1vw, 60vh);}
+    22% {-webkit-transform: scale(1.055) translate(11.2vw, 56.7vh);
+         -moz-transform: scale(1.054) translate(0.8vw, 56.8vh);}
+    30% {-webkit-transform: scale(1.055) translate(11.2vw, 56.8vh);
+         -moz-transform: scale(1.054) translate(0.8vw, 56.8vh);}
+    55% {-webkit-transform: scale(1) translate(12vw, 60vh);
+         -moz-transform: scale(1) translate(1vw, 60vh);}
 }
+
+
 
 @media only screen and (min-width: 1100px)
 {
-.mesa {
-  height: 32.5vmin;
-  }
-}
-.lunaluz {
-  -webkit-transform: translate(20vw, 19vh);
-  -moz-transform: translate(0.1vw, 17vh);
-}
-@media only screen and (min-width: 1200px)
-{
-  .mesa {
-    -webkit-transform: translate(12vw, 62vh);
-    -moz-transform: translate(2vw, 60vh);
-  }
-  
-  .panza {
-    -webkit-transform: translate(11.7vw, 62vh);
-    -moz-transform: translate(2vw, 60vh);
-  }
- 
-  @keyframes  panza {
-    0%  {-webkit-transform: scale(1) translate(11.7vw, 62vh);
-         -moz-transform: scale(1) translate(2vw, 60vh);}
-    22% {-webkit-transform: scale(1.055) translate(11.7vw, 58.6vh);
-         -moz-transform: scale(1.054) translate(2vw, 56.8vh);}
-    30% {-webkit-transform: scale(1.055) translate(11.7vw, 58.6vh);
-         -moz-transform: scale(1.054) translate(2vw, 56.8vh);}
-    55% {-webkit-transform: scale(1) translate(11.7vw, 62vh);
-         -moz-transform: scale(1) translate(2vw, 60vh);}
-  }
+  .texto {
+    font-size: 3.5vmin;
+    margin: 3% auto auto 20%;  }
 }

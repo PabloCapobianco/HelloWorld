@@ -8,7 +8,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="panza.svg"
-   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   inkscape:version="1.0.1 (1.0.1+r75)"
    id="svg6177"
    version="1.1"
    viewBox="0 0 65.558472 32.740971"
@@ -20,15 +20,15 @@
      inkscape:window-maximized="0"
      inkscape:window-y="0"
      inkscape:window-x="80"
-     inkscape:window-height="768"
+     inkscape:window-height="741"
      inkscape:window-width="1278"
      showgrid="false"
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="69.425187"
-     inkscape:cx="126.21372"
-     inkscape:zoom="1.979899"
+     inkscape:cy="96.74586"
+     inkscape:cx="121.05226"
+     inkscape:zoom="2.8"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,10 +53,10 @@
      inkscape:groupmode="layer"
      inkscape:label="Capa 1">
     <ellipse
-       style="opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:#907aa9;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#ffaaaa;fill-opacity:1;stroke:#907aa9;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3893"
-       cx="32.999859"
-       cy="23.1635"
+       cx="33.174492"
+       cy="22.814289"
        rx="5.8201246"
        ry="3.5666275" />
   </g>

@@ -17,3 +17,10 @@ function esp(){
             idioma=true;
     }
 }
+
+function descargar(){
+    var link = document.createElement("a");
+    link.href = "CV.pdf";
+    link.click();
+}
+

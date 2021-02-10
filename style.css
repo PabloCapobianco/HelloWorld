@@ -55,10 +55,10 @@ body {
   background-color: rgba(202, 108, 124, 0.829);
   border-radius: 8px;
   font-size: 90%;
-  width: 9rem;
+  width: 11rem;
   place-items: center;
   margin: auto;
-  height: 75%;
+  height: 85%;
 }
 
 .cv:hover {

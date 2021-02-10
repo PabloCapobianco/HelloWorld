@@ -25,25 +25,49 @@ body {
   font-size: 3vmin;
   display: grid;
   grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.idiomas {
+  display: grid;
   grid-template-columns: 1fr 0.3fr 1fr;
-  margin: auto auto auto 20%;
+  height: 2rem;
+  place-items: center;
+  margin-top: 8%;
+
 }
 
 .español {
   color: rgb(255, 152, 215);
+  text-shadow: 0 0 4px rgba(255, 152, 216, 0.623);
 }
 
 .english:hover {
-  cursor: pointer
+  cursor: pointer;
 }
   
 .español:hover {
   cursor: pointer;
 }
 
+.cv {
+  display: grid;
+  background-color: rgba(202, 108, 124, 0.829);
+  border-radius: 8px;
+  font-size: 90%;
+  width: 7rem;
+  place-items: center;
+  margin: auto;
+  height: 75%;
+}
+
+.cv:hover {
+  cursor: pointer;
+}
+
 .texto {
   color: white;
-  margin: 8% auto auto 12%;
+  margin: auto auto auto 10%;
   font-family: 'Raleway';
   font-size: 5.3vmin;
   text-align: left;

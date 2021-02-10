@@ -67,9 +67,9 @@ body {
 
 .texto {
   color: white;
-  margin: auto auto auto 10%;
+  margin: 5% auto auto 10%;
   font-family: 'Raleway';
-  font-size: 5.3vmin;
+  font-size: 5.6vmin;
   text-align: left;
   z-index: 8;
   white-space: nowrap;

@@ -16,7 +16,7 @@ body {
   background: #000000ff;
   z-index: 5;
   display: grid;
-  grid-template-rows: 15% auto 15%;
+  grid-template-rows: 18% auto minmax(15%, 25%;
 }
 
 .encabezado {
@@ -81,7 +81,7 @@ body {
   font-family: 'Montserrat';
   font-size: 2.8vmin;
   text-align: center;
-  margin: -10% auto 20% 12%;
+  margin: auto auto 20% 12%;
   color: rgb(160, 255, 239);
   z-index: 8;
   }
@@ -336,7 +336,6 @@ path:nth-child(3){
 
   .footer {
     font-size: 2.3vmin;
-    margin: auto auto 20% 12%;
   }
 }
 

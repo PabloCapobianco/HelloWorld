@@ -55,7 +55,7 @@ body {
   background-color: rgba(202, 108, 124, 0.829);
   border-radius: 8px;
   font-size: 90%;
-  width: 11rem;
+  width: 13rem;
   place-items: center;
   margin: auto;
   height: 85%;
@@ -326,6 +326,10 @@ path:nth-child(3){
 
 
 @media only screen and (min-width: 490px) {
+ .cv {
+    width: 11rem;
+    }
+  
   .texto {
     font-size: 5vmin;  
   }

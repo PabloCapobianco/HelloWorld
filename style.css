@@ -124,9 +124,9 @@ body {
 
 .mesa {
   position: absolute;
-  -webkit-transform: translate(16vw, 62vh);
-  -moz-transform: translate(3vw, 60vh);
-  width: 32%;
+  -webkit-transform: translate(18vw, 62vh);
+  -moz-transform: translate(5vw, 60vh);
+  width: 35%;
 }
 
 .panza {
@@ -345,6 +345,15 @@ path:nth-child(3){
     font-size: 4.5vmin; 
     margin: 0% auto auto 20%;      
     }
+  
+  .mesa {
+  position: absolute;
+  -webkit-transform: translate(16vw, 62vh);
+  -moz-transform: translate(3vw, 60vh);
+  width: 32%;
+}
+
+
 }
 
 @media only screen and (min-width: 600px)

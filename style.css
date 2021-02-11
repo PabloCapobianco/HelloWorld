@@ -135,19 +135,19 @@ body {
   animation-iteration-count: infinite;
   animation-delay: 0s;
   z-index: 7;
-  -webkit-transform: translate(15vw, 62vh);
-  -moz-transform: translate(3vw, 60vh);
+  -webkit-transform: translate(18vw, 62vh);
+  -moz-transform: translate(5vw, 60vh);
 }
 
 @keyframes  panza {
-  0%  {-webkit-transform: scale(1) translate(15vw, 62vh);
-       -moz-transform: scale(1) translate(3vw, 60vh);}
-  22% {-webkit-transform: scale(1.055) translate(14.2vw, 58.7vh);
-       -moz-transform: scale(1.054) translate(2.8vw, 56.8vh);}
-  30% {-webkit-transform: scale(1.055) translate(14.2vw, 58.8vh);
-       -moz-transform: scale(1.054) translate(2.8vw, 56.8vh);}
-  55% {-webkit-transform: scale(1) translate(15vw, 62vh);
-       -moz-transform: scale(1) translate(3vw, 60vh);}
+  0%  {-webkit-transform: scale(1) translate(18vw, 62vh);
+       -moz-transform: scale(1) translate(5vw, 60vh);}
+  22% {-webkit-transform: scale(1.055) translate(17.2vw, 58.7vh);
+       -moz-transform: scale(1.054) translate(4.8vw, 56.8vh);}
+  30% {-webkit-transform: scale(1.055) translate(17.2vw, 58.8vh);
+       -moz-transform: scale(1.054) translate(4.8vw, 56.8vh);}
+  55% {-webkit-transform: scale(1) translate(18vw, 62vh);
+       -moz-transform: scale(1) translate(5vw, 60vh);}
 }
 
 
@@ -347,10 +347,15 @@ path:nth-child(3){
     }
   
   .mesa {
-  position: absolute;
-  -webkit-transform: translate(16vw, 62vh);
-  -moz-transform: translate(3vw, 60vh);
-  width: 32%;
+    -webkit-transform: translate(16vw, 62vh);
+    -moz-transform: translate(3vw, 60vh);
+    width: 32%;
+    }
+    
+  .panza {
+    -webkit-transform: translate(16vw, 62vh);
+    -moz-transform: translate(3vw, 60vh);
+    }
 }
 
 

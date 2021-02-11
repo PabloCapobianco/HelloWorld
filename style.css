@@ -59,6 +59,7 @@ body {
   place-items: center;
   margin: auto;
   height: 85%;
+  z-index: 8;
 }
 
 .cv:hover {

@@ -81,7 +81,7 @@ body {
   font-family: 'Montserrat';
   font-size: 2.8vmin;
   text-align: center;
-  margin: -5% auto 20% 12%;
+  margin: -10% auto 20% 12%;
   color: rgb(160, 255, 239);
   z-index: 8;
   }
@@ -338,7 +338,6 @@ path:nth-child(3){
     font-size: 2.3vmin;
     margin: auto auto 20% 12%;
   }
-}
 }
 
 @media only screen and (min-width: 550px)

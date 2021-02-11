@@ -16,7 +16,7 @@ body {
   background: #000000ff;
   z-index: 5;
   display: grid;
-  grid-template-rows: 18% auto minmax(15%, 25%;
+  grid-template-rows: 15% auto 15%;
 }
 
 .encabezado {
@@ -55,11 +55,10 @@ body {
   background-color: rgba(202, 108, 124, 0.829);
   border-radius: 8px;
   font-size: 90%;
-  width: 15rem;
+  width: 11rem;
   place-items: center;
-  margin: auto;
+  margin: 4% auto auto auto;
   height: 85%;
-  z-index: 8;
 }
 
 .cv:hover {
@@ -70,7 +69,7 @@ body {
   color: white;
   margin: 10% auto auto 10%;
   font-family: 'Raleway';
-  font-size: 5.6vmin;
+  font-size: 1.2rem;
   text-align: left;
   z-index: 8;
   white-space: nowrap;
@@ -81,7 +80,7 @@ body {
   font-family: 'Montserrat';
   font-size: 2.8vmin;
   text-align: center;
-  margin: auto auto 20% 12%;
+  margin: -5% auto 20% 12%;
   color: rgb(160, 255, 239);
   z-index: 8;
   }
@@ -124,9 +123,9 @@ body {
 
 .mesa {
   position: absolute;
-  -webkit-transform: translate(18vw, 62vh);
-  -moz-transform: translate(5vw, 60vh);
-  width: 35%;
+  -webkit-transform: translate(16vw, 62vh);
+  -moz-transform: translate(4.5vw, 60vh);
+  width: 38%;
 }
 
 .panza {
@@ -135,19 +134,19 @@ body {
   animation-iteration-count: infinite;
   animation-delay: 0s;
   z-index: 7;
-  -webkit-transform: translate(18vw, 62vh);
-  -moz-transform: translate(5vw, 60vh);
+  -webkit-transform: translate(15vw, 62vh);
+  -moz-transform: translate(4.5vw, 60vh);
 }
 
 @keyframes  panza {
-  0%  {-webkit-transform: scale(1) translate(18vw, 62vh);
-       -moz-transform: scale(1) translate(5vw, 60vh);}
-  22% {-webkit-transform: scale(1.055) translate(17.2vw, 58.7vh);
-       -moz-transform: scale(1.054) translate(4.8vw, 56.8vh);}
-  30% {-webkit-transform: scale(1.055) translate(17.2vw, 58.8vh);
-       -moz-transform: scale(1.054) translate(4.8vw, 56.8vh);}
-  55% {-webkit-transform: scale(1) translate(18vw, 62vh);
-       -moz-transform: scale(1) translate(5vw, 60vh);}
+  0%  {-webkit-transform: scale(1) translate(15vw, 62vh);
+       -moz-transform: scale(1) translate(4.5vw, 60vh);}
+  22% {-webkit-transform: scale(1.055) translate(14.2vw, 58.7vh);
+       -moz-transform: scale(1.054) translate(4.3vw, 56.8vh);}
+  30% {-webkit-transform: scale(1.055) translate(14.2vw, 58.8vh);
+       -moz-transform: scale(1.054) translate(4.3vw, 56.8vh);}
+  55% {-webkit-transform: scale(1) translate(15vw, 62vh);
+       -moz-transform: scale(1) translate(4.5vw, 60vh);}
 }
 
 
@@ -326,49 +325,27 @@ path:nth-child(3){
 
 
 @media only screen and (min-width: 490px) {
- .cv {
-    width: 11rem;
-    }
-  
   .texto {
     font-size: 5vmin;  
   }
 
   .footer {
     font-size: 2.3vmin;
+    margin: auto auto 20% 12%;
+
   }
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 550px)
+{
   .texto {
     font-size: 4.5vmin; 
     margin: 0% auto auto 20%;      
     }
-  
-  .mesa {
-    -webkit-transform: translate(16vw, 62vh);
-    -moz-transform: translate(3vw, 60vh);
-    width: 32%;
-    }
-    
-  .panza {
-    -webkit-transform: translate(16vw, 62vh);
-    -moz-transform: translate(3vw, 60vh);
-    }
-  
-  @keyframes  panza {
-    0%  {-webkit-transform: scale(1) translate(16vw, 62vh);
-         -moz-transform: scale(1) translate(3vw, 60vh);}
-    22% {-webkit-transform: scale(1.055) translate(15.2vw, 58.7vh);
-         -moz-transform: scale(1.054) translate(2.8vw, 56.8vh);}
-    30% {-webkit-transform: scale(1.055) translate(15.2vw, 58.8vh);
-         -moz-transform: scale(1.054) translate(2.8vw, 56.8vh);}
-    55% {-webkit-transform: scale(1) translate(16vw, 62vh);
-         -moz-transform: scale(1) translate(3vw, 60vh);}
-  }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px)
+{
   .texto {
   font-size: 4vmin;  
   }
@@ -389,6 +366,7 @@ path:nth-child(3){
     -webkit-transform: translate(12vw, 60vh);
     -moz-transform: translate(1vw, 60vh);
   }
+
   @keyframes  panza {
     0%  {-webkit-transform: scale(1) translate(12vw, 60vh);
          -moz-transform: scale(1) translate(1vw, 60vh);}
@@ -398,14 +376,13 @@ path:nth-child(3){
          -moz-transform: scale(1.054) translate(0.8vw, 56.8vh);}
     55% {-webkit-transform: scale(1) translate(12vw, 60vh);
          -moz-transform: scale(1) translate(1vw, 60vh);}
-    }
 }
 
 
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1100px)
+{
   .texto {
     font-size: 3.5vmin;
-    margin: 3% auto auto 20%;
-  }
+    margin: 3% auto auto 20%;  }
 }

@@ -11,7 +11,7 @@ function eng(){
 
 function esp(){
     if (idioma==false){
-            document.getElementById("texto").innerHTML =  "Hola;<br /><br />hago cosas lindas<br /><br />para la web,<br />escritorio<br /><br />y  móviles</div>";
+            document.getElementById("texto").innerHTML =  "Hola;<br /><br />hago cosas lindas<br /><br />para la web,<br /><br />escritorio<br /><br />y  móviles</div>";
             document.getElementById("español").style.color = "rgb(255, 152, 215)";
             document.getElementById("english").style.color = "white";
             idioma=true;

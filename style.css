@@ -16,7 +16,7 @@ body {
   background: #000000ff;
   z-index: 5;
   display: grid;
-  grid-template-rows: 15% auto 15%;
+  grid-template-rows: 13% auto 13% 15%;
 }
 
 .encabezado {
@@ -24,8 +24,7 @@ body {
   font-family: 'Montserrat';
   font-size: 3vmin;
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-rows: 1fr 1fr;
+  padding-left: 2%;
 }
 
 .idiomas {
@@ -50,40 +49,50 @@ body {
   cursor: pointer;
 }
 
+.texto {
+  color: white;
+  font-family: 'Raleway';
+  font-size: 1.25rem;
+  text-align: center;
+  z-index: 8;
+  white-space: nowrap;
+  margin: auto auto auto auto;
+  padding-top: 5%;
+  line-height: 130%;
+  padding-left: 2%;
+}
+
 .cv {
   display: grid;
   background-color: rgba(202, 108, 124, 0.829);
   border-radius: 8px;
   font-size: 90%;
-  width: 11rem;
   place-items: center;
-  margin: 4% auto auto auto;
-  height: 85%;
+  margin: auto auto auto auto;
+  height: 35%;
+  width: 8rem;
+  font-family: 'Montserrat';
+  font-size: 2vmin;
+  color: white;
+  padding-left: 2%;
 }
 
 .cv:hover {
   cursor: pointer;
 }
 
-.texto {
-  color: white;
-  margin: 10% auto auto 10%;
-  font-family: 'Raleway';
-  font-size: 1.2rem;
-  text-align: left;
-  z-index: 8;
-  white-space: nowrap;
-}
 
-  .footer {
-  color: white;
+.footer {
+  display: grid;
+  place-items: center;
   font-family: 'Montserrat';
-  font-size: 2.8vmin;
-  text-align: center;
-  margin: -5% auto 20% 12%;
+  font-size: 2.8vmin; 
   color: rgb(160, 255, 239);
   z-index: 8;
-  }
+  text-align: center;
+  margin: auto auto 10% auto;
+  padding-left: 2%;
+}
 
 .animacion {
   display: grid;
@@ -153,8 +162,8 @@ body {
 
 .cuadrado {
   position: absolute;
-  -webkit-transform: scaleY(1.001) translate(41.5vw, 0vh);
-  -moz-transform: scaleY(1.001) translate(41.5vw, 0vh);
+  -webkit-transform: scaleY(1.001) translate(40.5vw, 0vh);
+  -moz-transform: scaleY(1.001) translate(40.5vw, 0vh);
   height: 100vh;
   z-index: 3;
 }
@@ -331,8 +340,6 @@ path:nth-child(3){
 
   .footer {
     font-size: 2.3vmin;
-    margin: auto auto 20% 12%;
-
   }
 }
 
@@ -383,6 +390,6 @@ path:nth-child(3){
 @media only screen and (min-width: 1100px)
 {
   .texto {
-    font-size: 3.5vmin;
-    margin: 3% auto auto 20%;  }
+    font-size: 4.3vmin;
+    margin: 3% auto auto auto;  }
 }

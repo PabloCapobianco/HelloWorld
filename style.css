@@ -98,6 +98,7 @@ body {
   display: grid;
   background: linear-gradient(to top,  rgb(124, 179, 189), rgb(19, 93, 100));
   justify-items: center;
+  padding-right: 100%;
 }
 
 .luna {

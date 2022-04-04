@@ -105,7 +105,7 @@ body {
   position: absolute;
   width: 20%;
   opacity: 0.9;
-  -webkit-transform: translate(21vw, 16vh);
+  -webkit-transform: translate(35vw, 16vh);
   -moz-transform: translate(0.5vw, 20.5vh);
   z-index: 3;
 }

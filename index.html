@@ -443,23 +443,6 @@ function animateText() {
   }
 
 
-//IMAGES
-var frame_1 = new Image();
-frame_1.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_1.svg";
-var frame_2 = new Image();
-frame_2.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_2.svg";
-var frame_3 = new Image();
-frame_3.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_3.svg";
-var frame_4 = new Image();
-frame_4.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_4.svg";
-var frame_5 = new Image();
-frame_5.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_5.svg";
-const imageArray = [frame_1, frame_2, frame_3, frame_4, frame_5];
-var counter = imageArray.length;
-var animationCounter = 0;
-var frameChange = true;
-var pause = false;
-
 
 function boxSelect(event) {
   clickedElement = event.target;
@@ -523,6 +506,16 @@ const estrella7 = new ImageLoader('./estrellaluz.svg', booleanArray);
 const estrella8 = new ImageLoader('./estrellaluz.svg', booleanArray);
 const estrella9 = new ImageLoader('./estrellaluz.svg', booleanArray);
 
+const frame_1 = new ImageLoader('./humo_1.svg', booleanArray);
+const frame_2 = new ImageLoader('./humo_2.svg', booleanArray);
+const frame_3 = new ImageLoader('./humo_3.svg', booleanArray);
+const frame_4 = new ImageLoader('./humo_4.svg', booleanArray);
+const frame_5 = new ImageLoader('./humo_5.svg', booleanArray);
+const imageArray = [frame_1, frame_2, frame_3, frame_4, frame_5];
+var counter = imageArray.length;
+var animationCounter = 0;
+var frameChange = true;
+var pause = false;
 
 
 

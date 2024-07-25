@@ -465,32 +465,6 @@ function boxSelect(event) {
 }
 
 
-function checkLoad() {
-    counter--;
-    if (counter === 0) {
-        humo_load = true;
-    }
-}
-
-frame_1.onload = () => {
-    checkLoad();
-};
-
-frame_2.onload = () => {
-    checkLoad();
-};
-
-frame_3.onload = () => {
-    checkLoad();
-};
-
-frame_4.onload = () => {
-    checkLoad();
-};
-
-frame_5.onload = () => {
-    checkLoad();
-};
 
 //CUSTOM IMAGE INSTANCES
 const mesa = new ImageLoader('./mesa.svg', booleanArray);
@@ -517,6 +491,32 @@ var animationCounter = 0;
 var frameChange = true;
 var pause = false;
 
+function checkLoad() {
+    counter--;
+    if (counter === 0) {
+        humo_load = true;
+    }
+}
+
+frame_1.onload = () => {
+    checkLoad();
+};
+
+frame_2.onload = () => {
+    checkLoad();
+};
+
+frame_3.onload = () => {
+    checkLoad();
+};
+
+frame_4.onload = () => {
+    checkLoad();
+};
+
+frame_5.onload = () => {
+    checkLoad();
+};
 
 
 //A FUNCTION THAT HANDLES SCREEN RESIZING

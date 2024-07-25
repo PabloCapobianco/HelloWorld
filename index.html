@@ -234,10 +234,8 @@
 //STATE
 
 
-
 //DOM LOADING
 let domLoad = false;
-
 
 // Listen for the DOMContentLoaded event to set loadCheck to true
 document.addEventListener("DOMContentLoaded", function () {
@@ -279,7 +277,6 @@ var skillsarray = [
   ["Data fetching and Asynchronous calls", "ES Modules and Npm cli", "Dinamic DOM with Vainilla and React.", "Production bundling with Vite"],
   ["Linux admin", "SQL cli", "Godot apps"]]
 
-
   
 var skillscontent = 
   '<div class="skillscontent"><div>'+skillsarray[0][0]+'</div><div>'+skillsarray[0][1]+'</div><div>'+skillsarray[0][2]+'</div></div>'
@@ -290,8 +287,7 @@ var profilecont = document.getElementsByClassName("profile-cont")[0];
 var profiletextarray = ["Linux Administrator. ", "Python and Django backend", "Full Javascript"];
 var portfoliocont = ['<a href="https://github.com/PabloCapobianco/Extractor_Excel_COFYB">Python / Tkinter: Desktop app for COFYB</a>',
 '<a href="https://github.com/PabloCapobianco/COFYBapp">Django web app for COFYB</a>',
-'<a href="https://github.com/PabloCapobianco/TextAnimationJS"> Javascript function for text write animation</a>',
-
+'<a href="https://github.com/PabloCapobianco/TextAnimationJS"> Javascript function for text write animation</a>'
 ];
 var portfolio = '<div class="portfolio">'+portfoliocont[0]+portfoliocont[1]+portfoliocont[2]+portfoliocont[3]+'</div>'
 var l = 0;
@@ -301,7 +297,6 @@ const content = [
 profile,
 skillshtml,
 portfolio
-
 ];
 
 var bar_state = 0;
@@ -315,9 +310,7 @@ document.getElementById("navbar").children[2].index = 2;
 humo_x = 1;
 humo_y = 1;
 
-
-
-
+    
 function skillsdisplay(i) {
   var skills = ""
   skillsarray[i].forEach(skill => {skills = skills + '<div>' + skill + '</div>'});
@@ -358,9 +351,6 @@ function skillstate(event) {
   }
 //  console.log(clickedEl.className.baseVal);
 }
-
-
-
 
 
 //IMAGE WITH LOADER CLASS (A class that stores in a boolean array the laoded status)
@@ -442,8 +432,6 @@ function animateText() {
     write();  
   }
 
-
-
 function boxSelect(event) {
   clickedElement = event.target;
   console.log(clickedElement.index);
@@ -464,33 +452,6 @@ function boxSelect(event) {
   console.log("Clicked Element ClassList After Adding 'selected':", clickedElement.classList);
 }
 
-
-function checkLoad() {
-    counter--;
-    if (counter === 0) {
-        humo_load = true;
-    }
-}
-
-frame_1.onload = () => {
-    checkLoad();
-};
-
-frame_2.onload = () => {
-    checkLoad();
-};
-
-frame_3.onload = () => {
-    checkLoad();
-};
-
-frame_4.onload = () => {
-    checkLoad();
-};
-
-frame_5.onload = () => {
-    checkLoad();
-};
 
 //CUSTOM IMAGE INSTANCES
 const mesa = new ImageLoader('./mesa.svg', booleanArray);
@@ -548,7 +509,6 @@ frame_4.onload = () => {
 frame_5.onload = () => {
     checkLoad();
 };
-
 
 //A FUNCTION THAT HANDLES SCREEN RESIZING
 function screenAdjust() {
@@ -711,7 +671,6 @@ screenAdjust();
 window.addEventListener('resize', screenAdjust);
   if(bar_state === 0) {animateText()};
 loadCheck(booleanArray);
-
 
 </script>
 </body>

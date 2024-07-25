@@ -660,10 +660,13 @@ function loadCheck(booleanArray) {
     if (!booleanArray[i].value) {
       setTimeout(() => { // Use arrow function to preserve the correct scope
         loadCheck(booleanArray);
-      }, 500);
+      }, 50);
       console.log('images loading');
       return;
     }
+    if (!humo_load) {      setTimeout(() => { // Use arrow function to preserve the correct scope
+        loadCheck(booleanArray);
+      }, 50);
 }
   }
   console.log('images loaded');
@@ -672,7 +675,6 @@ function loadCheck(booleanArray) {
   
   Render(); // All images are loaded, start rendering
 }
-
 screenAdjust();
 window.addEventListener('resize', screenAdjust);
   if(bar_state === 0) {animateText()};

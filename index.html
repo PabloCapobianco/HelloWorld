@@ -660,13 +660,13 @@ function loadCheck(booleanArray) {
     if (!booleanArray[i].value) {
       setTimeout(() => { // Use arrow function to preserve the correct scope
         loadCheck(booleanArray);
-      }, 50);
+      }, 500);
       console.log('images loading');
       return;
     }
     if (!humo_load) {      setTimeout(() => { // Use arrow function to preserve the correct scope
         loadCheck(booleanArray);
-      }, 50);
+      }, 500);
 }
   }
   console.log('images loaded');

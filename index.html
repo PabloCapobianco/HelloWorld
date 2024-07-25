@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+    <!DOCTYPE html>
 <head>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet"> 
@@ -465,6 +465,32 @@ function boxSelect(event) {
 }
 
 
+function checkLoad() {
+    counter--;
+    if (counter === 0) {
+        humo_load = true;
+    }
+}
+
+frame_1.onload = () => {
+    checkLoad();
+};
+
+frame_2.onload = () => {
+    checkLoad();
+};
+
+frame_3.onload = () => {
+    checkLoad();
+};
+
+frame_4.onload = () => {
+    checkLoad();
+};
+
+frame_5.onload = () => {
+    checkLoad();
+};
 
 //CUSTOM IMAGE INSTANCES
 const mesa = new ImageLoader('./mesa.svg', booleanArray);
@@ -480,13 +506,18 @@ const estrella7 = new ImageLoader('./estrellaluz.svg', booleanArray);
 const estrella8 = new ImageLoader('./estrellaluz.svg', booleanArray);
 const estrella9 = new ImageLoader('./estrellaluz.svg', booleanArray);
 
-const frame_1 = new ImageLoader('./humo_1.svg', booleanArray);
-const frame_2 = new ImageLoader('./humo_2.svg', booleanArray);
-const frame_3 = new ImageLoader('./humo_3.svg', booleanArray);
-const frame_4 = new ImageLoader('./humo_4.svg', booleanArray);
-const frame_5 = new ImageLoader('./humo_5.svg', booleanArray);
+
+frame_1.src = "./humo_1.svg";
+var frame_2 = new Image();
+frame_2.src = "./humo_2.svg";
+var frame_3 = new Image();
+frame_3.src = "./humo_3.svg";
+var frame_4 = new Image();
+frame_4.src = "./humo_4.svg";
+var frame_5 = new Image();
+frame_5.src = "./humo_5.svg";
 const imageArray = [frame_1, frame_2, frame_3, frame_4, frame_5];
-var counter = imageArray.length + 1;
+var counter = imageArray.length;
 var animationCounter = 0;
 var frameChange = true;
 var pause = false;
@@ -498,26 +529,25 @@ function checkLoad() {
     }
 }
 
-frame_1.image.onload = () => {
+frame_1.onload = () => {
     checkLoad();
 };
 
-frame_2.image.onload = () => {
+frame_2.onload = () => {
     checkLoad();
 };
 
-frame_3.image.onload = () => {
+frame_3.onload = () => {
     checkLoad();
 };
 
-frame_4.image.onload = () => {
+frame_4.onload = () => {
     checkLoad();
 };
 
-frame_5.image.onload = () => {
+frame_5.onload = () => {
     checkLoad();
 };
-
 
 //A FUNCTION THAT HANDLES SCREEN RESIZING
 function screenAdjust() {
@@ -622,7 +652,7 @@ function changeFrame() {
 
 function drawHumo() {
     if (!pause && animationCounter < imageArray.length) {
-    ctx.drawImage(imageArray[animationCounter].image, humo_x,  humo_y, imageArray[animationCounter].image.width * humoscalef, imageArray[animationCounter].image.height * humoscalef);
+    ctx.drawImage(imageArray[animationCounter], humo_x,  humo_y, imageArray[animationCounter].width * humoscalef, imageArray[animationCounter].height * humoscalef);
     changeFrame();
     }
     if (!pause && animationCounter === imageArray.length) {
@@ -660,13 +690,13 @@ function loadCheck(booleanArray) {
     if (!booleanArray[i].value) {
       setTimeout(() => { // Use arrow function to preserve the correct scope
         loadCheck(booleanArray);
-      }, 500);
+      }, 50);
       console.log('images loading');
       return;
     }
     if (!humo_load) {      setTimeout(() => { // Use arrow function to preserve the correct scope
         loadCheck(booleanArray);
-      }, 500);
+      }, 50);
 }
   }
   console.log('images loaded');
@@ -675,6 +705,7 @@ function loadCheck(booleanArray) {
   
   Render(); // All images are loaded, start rendering
 }
+
 screenAdjust();
 window.addEventListener('resize', screenAdjust);
   if(bar_state === 0) {animateText()};

@@ -622,7 +622,7 @@ function changeFrame() {
 
 function drawHumo() {
     if (!pause && animationCounter < imageArray.length) {
-    ctx.drawImage(imageArray[animationCounter], humo_x,  humo_y, imageArray[animationCounter].width * humoscalef, imageArray[animationCounter].height * humoscalef);
+    ctx.drawImage(imageArray[animationCounter].image, humo_x,  humo_y, imageArray[animationCounter].image.width * humoscalef, imageArray[animationCounter].image.height * humoscalef);
     changeFrame();
     }
     if (!pause && animationCounter === imageArray.length) {

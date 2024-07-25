@@ -1,0 +1,694 @@
+  <!DOCTYPE html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;250;300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;250;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  .container {
+    height: 100%;
+    display: grid;
+  }
+  .profile {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Adjusted to make the content area grow based on content */
+    height: 100%; /* Added to ensure the profile section takes up the full height */
+}
+
+  .profile-head {
+    font-size: 3vw;
+    font-family: 'Raleway';
+    font-weight: 300;
+    color: white;
+    margin-top: 10vh;
+    margin-left: 5vw;
+  }
+
+  @media screen and (orientation: portrait) {
+    .profile-head {
+    font-size: 6vw;
+    text-align: center;
+    margin-left: 0vw;
+  }
+  }
+
+  .profile-cont {
+    color: rgb(255, 156, 171);
+    display: flex;
+    flex-direction: column;
+    line-height: 8vw;
+    font-size: 2vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 4.5vw;
+    font-family: 'Raleway';
+    font-weight: 300;
+    text-align: left;
+    align-self: flex-start; /* Ensures content starts from the top */
+  }
+
+
+  @media screen and (orientation: portrait) {
+    .profile-cont {
+      font-size: 4vw;
+      line-height: 10vw;
+    }
+  }
+
+    .presentation {
+      background-color: black;
+    }
+
+    .skills {
+      background-color: black;
+      box-sizing: border-box;
+      padding: auto;
+      display: grid;
+      grid-template-rows: 25% auto;
+      margin-top: 5vh;
+    }
+
+    .canvas {
+      background: linear-gradient(to top,  rgb(124, 179, 189), rgb(19, 93, 100));
+    }
+
+    .navbar {
+      background: black;
+      color: rgb(255, 156, 171);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      font-family: 'Montserrat';
+      font-size: 2.3vh;
+      font-weight: 600;
+    }
+
+    .navbar div {
+      padding: 18px;
+      border-radius: 10px;
+    }
+
+
+    .box:hover {
+      background-color: rgb(68, 68, 68);
+    }
+
+    .selected {
+      color: white;
+      background-color: rgb(223, 136, 149);
+    }
+
+
+    .imagen > path {
+      fill: rgb(58, 157, 182);
+    }
+
+    svg.imagen path {
+      stroke : rgb(58, 157, 182);  
+    }
+
+    .imagen:hover > path {
+      fill: rgb(255, 255, 255);
+      stroke: rgb(255, 255, 255);  
+    }
+
+    .imagen {
+      width: 7vh;
+      height: 7vh;
+      z-index: 2;
+    }
+
+    .imagensel {
+      width: 7vh;
+      height: 7vh;
+      fill: rgb(255, 255, 255);
+      stroke: rgb(255, 255, 255);
+    }
+
+    .imgcont > div {
+      display: flex;
+      justify-content: center;
+      align-items: center ;
+    }
+
+    .imgcont {
+      display: grid;
+      grid-template-columns: auto auto auto ;  
+    }
+
+    .descripcion {
+      color: rgb(255, 156, 171);
+    }
+
+ 
+    .skillscontent {
+      color: rgb(255, 156, 171);
+      font-family: 'Raleway';
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-left: 8vh;
+      margin-right: 8vh;
+      margin-top: -10vh;
+      line-height: 6vh;
+      text-align: center;
+      font-size: 2.5vh;
+      font-weight: 250;
+    }
+    
+    .portfolio {
+      color: rgb(255, 156, 171);
+      font-family: 'Raleway';
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-left: 8vh;
+      margin-right: 8vh;
+      line-height: 6vh;
+      text-align: center;
+      font-size: 2.5vh;
+      font-weight: 250;
+    }
+
+    a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: rgb(255, 156, 171);
+}
+
+    a:hover {
+        color: rgb(255, 230, 233);
+    }
+
+
+    @media screen and (min-aspect-ratio: 5/4) {
+      .skillscontent {
+              line-height: 10vh;
+              font-size: 1.7vw;
+              margin-top: -7vh;
+            }
+
+      .portfolio {
+        line-height: 10vh;
+        font-size: 1.7vw;
+      }
+        }
+
+
+  </style>
+</head>
+<body>
+  <div class="navbar" id="navbar">
+    <div class="selected" onclick="boxSelect(event)">About me</div>
+    <div class="box" onclick="boxSelect(event)">Skills</div>
+    <div class="box" onclick="boxSelect(event)">Portfolio</div>
+    <div>Resume</div>
+  </div>
+  <div id="container" class="container">
+    <div class="presentation">
+      <div class="profile">
+        <div class="profile-head">full-stack dev</div>
+          <div class="profile-cont">|</div>      
+      </div>
+    </div>
+
+    <div>
+      <canvas id="myCanvas" class="canvas"></canvas>
+    </div>
+  </div>
+  <script>
+//STATE
+
+
+
+//DOM LOADING
+let domLoad = false;
+
+
+// Listen for the DOMContentLoaded event to set loadCheck to true
+document.addEventListener("DOMContentLoaded", function () {
+  domLoad =  true;
+});
+
+
+// Define a function that checks the loadCheck variable
+function domCheck() {
+  if (domLoad) {
+    console.log("loadCheck is true. Breaking the loop.");
+    return; // Break the loop if loadCheck is true
+  } else {
+    console.log("loadCheck is still false. Waiting 5 milliseconds...");
+    setTimeout(checkLoad, 5); // Call the function recursively after 5 milliseconds
+  }
+}
+
+
+// Start checking for the loadCheck variable
+domCheck();
+
+
+//VARIABLES
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const container = document.getElementById("container");
+const navbar = document.getElementById("navbar");
+const presentation = document.querySelectorAll('.presentation');
+
+const barElements = document.getElementsByClassName("box");
+var python = '<svg class="imagensel" viewBox="0 0 50 50"><path stroke-width="1.9" stroke="" d="M 25 2 C 20.941406 2 18.1875 2.96875 16.4375 4.375 C 14.6875 5.78125 14 7.589844 14 9.09375 L 14 14 L 24 14 L 24 15 L 9.09375 15 C 7.265625 15 5.410156 15.792969 4.09375 17.46875 C 2.777344 19.144531 2 21.644531 2 25 C 2 28.355469 2.777344 30.855469 4.09375 32.53125 C 5.410156 34.207031 7.265625 35 9.09375 35 L 14 35 L 14 40.90625 C 14 42.410156 14.6875 44.21875 16.4375 45.625 C 18.1875 47.03125 20.941406 48 25 48 C 29.058594 48 31.8125 47.03125 33.5625 45.625 C 35.3125 44.21875 36 42.410156 36 40.90625 L 36 36 L 26 36 L 26 35 L 40.90625 35 C 42.734375 35 44.589844 34.207031 45.90625 32.53125 C 47.222656 30.855469 48 28.355469 48 25 C 48 21.644531 47.222656 19.144531 45.90625 17.46875 C 44.589844 15.792969 42.734375 15 40.90625 15 L 36 15 L 36 9.09375 C 36 7.550781 35.316406 5.738281 33.5625 4.34375 C 31.808594 2.949219 29.054688 2 25 2 Z M 25 4 C 28.746094 4 31.015625 4.875 32.3125 5.90625 C 33.609375 6.9375 34 8.136719 34 9.09375 L 34 21 C 34 22.65625 32.65625 24 31 24 L 19 24 C 16.941406 24 15.167969 25.269531 14.40625 27.0625 C 14.277344 27.359375 14.160156 27.675781 14.09375 28 C 14.027344 28.324219 14 28.65625 14 29 L 14 33 L 9.09375 33 C 7.824219 33 6.648438 32.503906 5.6875 31.28125 C 4.726563 30.058594 4 28.042969 4 25 C 4 21.957031 4.726563 19.941406 5.6875 18.71875 C 6.648438 17.496094 7.824219 17 9.09375 17 L 26 17 L 26 12 L 16 12 L 16 9.09375 C 16 8.199219 16.386719 6.980469 17.6875 5.9375 C 18.988281 4.894531 21.257813 4 25 4 Z M 20 7 C 18.898438 7 18 7.898438 18 9 C 18 10.101563 18.898438 11 20 11 C 21.101563 11 22 10.101563 22 9 C 22 7.898438 21.101563 7 20 7 Z M 36 17 L 40.90625 17 C 42.175781 17 43.351563 17.496094 44.3125 18.71875 C 45.273438 19.941406 46 21.957031 46 25 C 46 28.042969 45.273438 30.058594 44.3125 31.28125 C 43.351563 32.503906 42.175781 33 40.90625 33 L 24 33 L 24 38 L 34 38 L 34 40.90625 C 34 41.800781 33.613281 43.019531 32.3125 44.0625 C 31.011719 45.105469 28.742188 46 25 46 C 21.257813 46 18.988281 45.105469 17.6875 44.0625 C 16.386719 43.019531 16 41.800781 16 40.90625 L 16 29 C 16 28.792969 16.023438 28.601563 16.0625 28.40625 C 16.34375 27.039063 17.550781 26 19 26 L 31 26 C 33.746094 26 36 23.746094 36 21 Z M 30 39 C 28.898438 39 28 39.898438 28 41 C 28 42.101563 28.898438 43 30 43 C 31.101563 43 32 42.101563 32 41 C 32 39.898438 31.101563 39 30 39 Z"/> </svg></svg>';
+var javascript = '<svg class="imagen" viewBox="0 0 18 16"><path stroke-width="0.5" stroke="" d="M0 1.75C0 0.783501 0.783502 0 1.75 0H14.25C15.2165 0 16 0.783502 16 1.75V3.75C16 4.16421 15.6642 4.5 15.25 4.5C14.8358 4.5 14.5 4.16421 14.5 3.75V1.75C14.5 1.61193 14.3881 1.5 14.25 1.5H1.75C1.61193 1.5 1.5 1.61193 1.5 1.75V14.25C1.5 14.3881 1.61193 14.5 1.75 14.5H15.25C15.6642 14.5 16 14.8358 16 15.25C16 15.6642 15.6642 16 15.25 16H1.75C0.783501 16 0 15.2165 0 14.25V1.75ZM8.25 5.75C8.66421 5.75 9 6.08579 9 6.5V10.5C9 11.5048 8.72399 12.2584 8.15514 12.7324C7.61223 13.1848 6.95384 13.25 6.5 13.25C6.08579 13.25 5.75 12.9142 5.75 12.5C5.75 12.0858 6.08579 11.75 6.5 11.75C6.84617 11.75 7.06277 11.6902 7.19486 11.5801C7.301 11.4916 7.5 11.2452 7.5 10.5V6.5C7.5 6.08579 7.83578 5.75 8.25 5.75ZM11.2757 6.58011C11.6944 6.08164 12.3507 5.75 13.25 5.75C14.0849 5.75 14.7148 6.03567 15.1394 6.48481C15.4239 6.78583 15.4105 7.26052 15.1095 7.54505C14.8085 7.82958 14.3338 7.81621 14.0493 7.51519C13.9394 7.39898 13.7204 7.25 13.25 7.25C12.7493 7.25 12.5306 7.41836 12.4243 7.54489C12.2934 7.70065 12.25 7.896 12.25 8C12.25 8.104 12.2934 8.29935 12.4243 8.45511C12.5306 8.58164 12.7493 8.75 13.25 8.75C13.3257 8.75 13.3988 8.76121 13.4676 8.78207C14.1307 8.87646 14.6319 9.17251 14.9743 9.58011C15.3684 10.0493 15.5 10.604 15.5 11C15.5 11.396 15.3684 11.9507 14.9743 12.4199C14.5556 12.9184 13.8993 13.25 13 13.25C12.1651 13.25 11.5352 12.9643 11.1106 12.5152C10.8261 12.2142 10.8395 11.7395 11.1405 11.4549C11.4415 11.1704 11.9162 11.1838 12.2007 11.4848C12.3106 11.601 12.5296 11.75 13 11.75C13.5007 11.75 13.7194 11.5816 13.8257 11.4551C13.9566 11.2993 14 11.104 14 11C14 10.896 13.9566 10.7007 13.8257 10.5449C13.7194 10.4184 13.5007 10.25 13 10.25C12.9243 10.25 12.8512 10.2388 12.7824 10.2179C12.1193 10.1235 11.6181 9.82749 11.2757 9.41989C10.8816 8.95065 10.75 8.396 10.75 8C10.75 7.604 10.8816 7.04935 11.2757 6.58011Z"/></svg>';
+var rest = '<svg class="imagen" viewBox="0 0 1000 1000"><path stroke-width="1" stroke="" d="M244 416q-35 0-59.5 24.5T160 500t24.5 59.5T244 584t59.5-24.5T328 500t-24.5-59.5T244 416zm256 0q-35 0-59.5 24.5T416 500t24.5 59.5 59 24.5 59.5-24.5 25-59.5-25-59.5-60-24.5h1zm256 0q-35 0-59.5 24.5T672 500t24.5 59.5T756 584t59.5-24.5T840 500t-24.5-59.5T756 416z"/></svg>'
+var cursor = true;
+
+var skillsarray = [
+  ["Django apps. User auth, DB ORM, Rest Api.", "Lambda functions for serverless.", "Web Scrapping and data Visualization."],
+  ["Data fetching and Asynchronous calls", "ES Modules and Npm cli", "Dinamic DOM with Vainilla and React.", "Production bundling with Vite"],
+  ["Linux admin", "SQL cli", "Godot apps"]]
+
+
+  
+var skillscontent = 
+  '<div class="skillscontent"><div>'+skillsarray[0][0]+'</div><div>'+skillsarray[0][1]+'</div><div>'+skillsarray[0][2]+'</div></div>'
+
+var skillshtml = '<div id="skillsbar" class="skills"><div id="imgcont" class="imgcont"><div class="img" onclick="skillstate(event)">'+python+'</div><div class="img" onclick="skillstate(event)">'+javascript+'</div><div onclick="skillstate(event)" class="img">'+rest+'</div></div></div>'+skillscontent;
+var profile = '<div class="profile"><div class="profile-head">full-stack dev</div><div class="profile-cont">|</div></div>'
+var profilecont = document.getElementsByClassName("profile-cont")[0];
+var profiletextarray = ["Linux Administrator. ", "Python and Django backend", "Full Javascript"];
+var portfoliocont = ['<a href="https://github.com/PabloCapobianco/Extractor_Excel_COFYB">Python / Tkinter: Desktop app for COFYB</a>',
+'<a href="https://github.com/PabloCapobianco/COFYBapp">Django web app for COFYB</a>',
+'<a href="https://github.com/PabloCapobianco/TextAnimationJS"> Javascript function for text write animation</a>',
+
+];
+var portfolio = '<div class="portfolio">'+portfoliocont[0]+portfoliocont[1]+portfoliocont[2]+portfoliocont[3]+'</div>'
+var l = 0;
+var i = 0;
+
+const content = [
+profile,
+skillshtml,
+portfolio
+
+];
+
+var bar_state = 0;
+var scale_factor = 1;
+var clickedElement =  0;
+var booleanArray = [];
+var humo_load = false;
+document.getElementById("navbar").children[0].index = 0;
+document.getElementById("navbar").children[1].index = 1;
+document.getElementById("navbar").children[2].index = 2;
+humo_x = 1;
+humo_y = 1;
+
+
+
+
+function skillsdisplay(i) {
+  var skills = ""
+  skillsarray[i].forEach(skill => {skills = skills + '<div>' + skill + '</div>'});
+  skillscontent = '<div>'+skills+'</div>';
+  return skillscontent;
+};
+
+
+//FUNCIÓN CONTROLADORA DE SKILLS. EFECTOS DE LOS ÍCONOS Y CONTENIDO
+function skillstate(event) {
+  var clickedEl
+
+  if(event.target.className.baseVal.length > 0) {
+    clickedEl = event.target;
+  } else {clickedEl = event.target.parentNode }
+
+  console.log(clickedEl.parentNode);
+  var parent = document.getElementById("imgcont");
+  var children = parent.children;
+  var index = Array.prototype.indexOf.call(children, clickedEl.parentNode);
+  // INDEX PARA ACCEDER AL ARRAY DE SKILLS
+  console.log(index);
+  console.log(typeof index);  
+  //console.log(document.getElementsByClassName("imagen"));
+
+  if(clickedEl.className.baseVal == 'imagen') {
+    for (let i = 0; i < 3; i++) { // Iterate from 0 to 2
+      if (parent.childNodes[i].childNodes[0].className.baseVal === "imagensel") {
+        parent.childNodes[i].childNodes[0].className.baseVal = "imagen"
+        //ACÁ VA EL BLOQUE DE CÓDIGO QUE CAMBIA EL CONTENEDOR DE SKILLS
+        break
+      }
+    };
+
+  clickedEl.className.baseVal = "imagensel";
+  var contentskill = document.getElementsByClassName("skillscontent")[0];
+  contentskill.innerHTML = skillsdisplay(index);
+  }
+//  console.log(clickedEl.className.baseVal);
+}
+
+
+
+
+
+//IMAGE WITH LOADER CLASS (A class that stores in a boolean array the laoded status)
+class ImageLoader {
+  constructor(src, booleanArray) {
+    this.image = new Image();
+    this.image.src = src;
+    this.booleanArray = booleanArray; // Store the booleanArray as a class property
+    this.index = booleanArray.push({ value: false }) - 1;
+    this.turnBoolean(); // Call the turnBoolean method directly in the constructor
+    this.x = 0;
+    this.y = 0; 
+    this.scalef = 0;
+  }
+
+  turnBoolean() {
+  this.image.onload = () => {
+    document.getElementById
+    console.log('Image loaded:', this.image.src);
+    this.booleanArray[this.index].value = true;
+  };
+}
+
+}
+
+//TEXT ANIMATION FUNCTION
+function animateText() {
+  i = 0;
+  l = 0;
+  var profilecont = document.getElementsByClassName("profile-cont")[0];
+  cursor = true;
+
+  function write() {
+
+    function fcursor() {
+      if(bar_state === 0) {
+        if(!cursor) {
+        profilecont.insertAdjacentHTML("beforeend", "|");
+        cursor = true;
+        setTimeout(fcursor, 500);
+      } else {
+          let contenido = profilecont.innerHTML;
+          profilecont.innerHTML = contenido.slice(0, -1);
+          cursor = false;
+          setTimeout(fcursor, 500);
+        }
+      }
+    }
+
+    if (l < profiletextarray.length) {
+        if (i < profiletextarray[l].length) {
+            profilecont.innerHTML = profilecont.innerHTML.slice(0, -1);
+            profilecont.insertAdjacentHTML("beforeend", profiletextarray[l][i]);
+            profilecont.insertAdjacentHTML("beforeend", "|");
+            i = i + 1;
+            if(bar_state === 0){setTimeout(write, 50)}; // Pause for 200ms
+        } else {
+            if (l < profiletextarray.length - 1) {
+                cursor = true;
+                profilecont.innerHTML = profilecont.innerHTML.slice(0, -1);
+                profilecont.insertAdjacentHTML("beforeend", "<br>");
+                profilecont.insertAdjacentHTML("beforeend", "|");
+            }
+
+            i = 0;
+            l = l + 1;
+            if(bar_state === 0) {
+              if (!(l == profiletextarray.length)) {
+                setTimeout(write, 20);
+              }
+
+              else {fcursor();}
+              
+            }
+          }
+        }
+      }
+      
+    write();  
+  }
+
+
+//IMAGES
+var frame_1 = new Image();
+frame_1.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_1.svg";
+var frame_2 = new Image();
+frame_2.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_2.svg";
+var frame_3 = new Image();
+frame_3.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_3.svg";
+var frame_4 = new Image();
+frame_4.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_4.svg";
+var frame_5 = new Image();
+frame_5.src = "/home/linuxlite/Escritorio/Pablo/Programación/Páginapersonal/HelloWorld-main/humo_5.svg";
+const imageArray = [frame_1, frame_2, frame_3, frame_4, frame_5];
+var counter = imageArray.length;
+var animationCounter = 0;
+var frameChange = true;
+var pause = false;
+
+
+function boxSelect(event) {
+  clickedElement = event.target;
+  console.log(clickedElement.index);
+  if(!clickedElement.classList.contains('selected')){
+  bar_state = clickedElement.index;
+  presentation[0].innerHTML = content[bar_state];
+  document.querySelectorAll("#navbar > div").forEach((element)=>{
+    if (element.classList.contains('selected')) {
+      element.classList.remove('selected');
+      element.classList.add('box');
+      }
+    })
+    if(clickedElement.index === 0) {animateText();}
+  };
+
+  clickedElement.classList.remove('box');
+  clickedElement.classList.add('selected');
+  console.log("Clicked Element ClassList After Adding 'selected':", clickedElement.classList);
+}
+
+
+function checkLoad() {
+    counter--;
+    if (counter === 0) {
+        humo_load = true;
+    }
+}
+
+frame_1.onload = () => {
+    checkLoad();
+};
+
+frame_2.onload = () => {
+    checkLoad();
+};
+
+frame_3.onload = () => {
+    checkLoad();
+};
+
+frame_4.onload = () => {
+    checkLoad();
+};
+
+frame_5.onload = () => {
+    checkLoad();
+};
+
+//CUSTOM IMAGE INSTANCES
+const mesa = new ImageLoader('./mesa.svg', booleanArray);
+const luna = new ImageLoader('./luna.svg', booleanArray);
+const nube = new ImageLoader('./nube.svg', booleanArray);
+const estrella1 = new ImageLoader('./estrellaluz.svg', booleanArray);
+const estrella2 = new ImageLoader('./estrellaluz.svg', booleanArray);
+const estrella3 = new ImageLoader('./estrellaluz.svg', booleanArray);
+const estrella4 = new ImageLoader('./estrellaluz.svg', booleanArray);
+const estrella5 = new ImageLoader('./estrellaluz.svg', booleanArray);
+const estrella6 = new ImageLoader('./estrellaluz.svg', booleanArray);
+const estrella7 = new ImageLoader('./estrellaluz.svg', booleanArray);
+const estrella8 = new ImageLoader('./estrellaluz.svg', booleanArray);
+const estrella9 = new ImageLoader('./estrellaluz.svg', booleanArray);
+
+
+
+
+//A FUNCTION THAT HANDLES SCREEN RESIZING
+function screenAdjust() {
+  navbar.style.height = window.innerHeight * 0.12 + "px";
+  container.style.height = window.innerHeight * 0.89 + "px";
+  if (window.innerWidth * 0.85 >= window.innerHeight) {
+    console.log('widht is major that height');
+    container.style.gridTemplateColumns = "1fr 1fr";
+    container.style.gridTemplateRows = "1fr";
+    canvas.width = container.clientWidth/2;
+    canvas.height = container.clientHeight;
+  }
+  else {
+    container.style.gridTemplateColumns = "1fr";
+    container.style.gridTemplateRows = "2fr 1fr";
+    canvas.width = container.clientWidth;
+    canvas.height = container.clientHeight * 0.40;    
+  }
+  //container.style.width = window.innerWidth + "px";
+  //container.style.height = window.innerHeight + "px";
+  console.log("func screeAdjust runned")
+  scale();
+}
+
+//A FUNCTION THAT HANDLES THE SCALE FACTORS FOR THE RENDERING
+function scale() {
+  scale_factor = canvas.width / mesa.image.width;
+  if (window.innerWidth * 0.85 < window.innerHeight) {
+    scale_factor = scale_factor / 2;
+
+  }
+  mesa.scalef = scale_factor * 0.6;
+  luna.scalef = scale_factor * 0.6;
+  estrella1.scalef = scale_factor * 0.14;
+  estrella2.scalef = scale_factor * 0.12;
+  estrella3.scalef = scale_factor * 0.09;
+  estrella4.scalef = scale_factor * 0.09;
+  estrella5.scalef = scale_factor * 0.05;
+  estrella6.scalef = scale_factor * 0.08;
+  humoscalef = scale_factor * 0.73;
+  if (window.innerWidth  > window.innerHeight) {
+    luna.scalef = scale_factor * 0.4;
+  }
+  console.log("func scale runned");
+  fixedPositions();
+}
+
+//FUNCIÓN DE LOS ELEMENTOS ESTÁTICOS
+function fixedPositions() {
+  mesa.x = canvas.width * 0.5 - mesa.image.width * 0.5 * mesa.scalef;
+  mesa.y = canvas.height - mesa.image.height * mesa.scalef;
+  luna.x = canvas.width * 0.5 - luna.image.width * 0.6 * luna.scalef;
+  luna.y = canvas.height * 0;
+  nube.x = canvas.width;
+  nube.y = canvas.height * 0.2;
+  estrella1.x = canvas.width * 0.15;
+  estrella1.y = canvas.height * 0.15;
+  estrella2.x = canvas.width * 0.9;
+  estrella2.y = canvas.height * 0.45;
+  estrella3.x = canvas.width * 0.35;
+  estrella3.y = canvas.height * 0.38;
+  estrella4.x = canvas.width * 0.09;
+  estrella4.y = canvas.height * 0.51;
+  estrella5.x = canvas.width * 0.5;
+  estrella5.y = canvas.height * 0.5;
+  estrella6.x = canvas.width * 0.65;
+  estrella6.y = canvas.height * 0.15;
+  estrella7.x = canvas.width * 0.15;
+  estrella7.y = canvas.height * 0.15;
+  estrella8.x = canvas.width * 0.15;
+  estrella8.y = canvas.height * 0.15;
+  estrella9.x = canvas.width * 0.15;
+  estrella9.y = canvas.height * 0.15;
+
+  humo_x = canvas.width * 0.47;
+  if (window.innerWidth >= window.innerHeight) {
+    humo_x = 2.22 * mesa.x;
+  }
+  humo_y = canvas.height - 0.98 * mesa.image.height * mesa.scalef;
+  console.log("func fixedPosition runned");
+}
+
+//FUNCIÓN DE LOS ELEMENTOS QUE SE DESPLAZAN
+  function Motion() {
+    nube.scalef = scale_factor * 0.8;
+    nube.x = nube.x - canvas.width * 0.0007;
+    if (nube.x < ( - canvas.width * 0.5)) {
+      nube.x = canvas.width;    
+    }
+  }
+
+//FUNCIÓN DE PARA EL CAMBIO DE FRAMES. EVALÚA CUÁNDO PASAR EL FRAME. LA PAUSA DETERMINA LA CANTIDAD DE CUADROS POR SEGUNDO
+function changeFrame() {
+    if (frameChange && !pause) {
+        frameChange = false;
+        setTimeout(function() {
+            frameChange = true;
+            animationCounter++;
+        }, 100);
+    }
+}
+
+function drawHumo() {
+    if (!pause && animationCounter < imageArray.length) {
+    ctx.drawImage(imageArray[animationCounter], humo_x,  humo_y, imageArray[animationCounter].width * humoscalef, imageArray[animationCounter].height * humoscalef);
+    changeFrame();
+    }
+    if (!pause && animationCounter === imageArray.length) {
+        pause = true;
+        setTimeout(function() {
+            pause = false;
+            animationCounter = 0;
+        }, 4000);
+
+    }
+}
+
+function Render () {
+  ctx.webkitImageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = false;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  Motion();
+  ctx.drawImage(mesa.image, mesa.x,  mesa.y, mesa.image.width * mesa.scalef, mesa.image.height * mesa.scalef);
+  ctx.drawImage(luna.image, luna.x,  luna.y, luna.image.height * luna.scalef,  luna.image.width * luna.scalef);
+  ctx.drawImage(nube.image, nube.x,  nube.y, nube.image.width * nube.scalef, nube.image.height * nube.scalef);
+  ctx.drawImage(estrella1.image, estrella1.x,  estrella1.y, estrella1.image.height * estrella1.scalef,  estrella1.image.width * estrella1.scalef);
+  ctx.drawImage(estrella2.image, estrella2.x,  estrella2.y, estrella2.image.height * estrella2.scalef,  estrella2.image.width * estrella2.scalef);
+  ctx.drawImage(estrella3.image, estrella3.x,  estrella3.y, estrella3.image.height * estrella3.scalef,  estrella3.image.width * estrella3.scalef);
+  ctx.drawImage(estrella4.image, estrella4.x,  estrella4.y, estrella4.image.height * estrella4.scalef,  estrella4.image.width * estrella4.scalef);
+  ctx.drawImage(estrella5.image, estrella5.x,  estrella5.y, estrella5.image.height * estrella5.scalef,  estrella5.image.width * estrella5.scalef);
+  ctx.drawImage(estrella6.image, estrella6.x,  estrella6.y, estrella6.image.height * estrella6.scalef,  estrella6.image.width * estrella6.scalef);
+  drawHumo();
+      setTimeout(function() {
+        requestAnimationFrame(Render);
+    }, 20);;
+}
+
+function loadCheck(booleanArray) {
+  for (var i = 0; i < booleanArray.length; i++) {
+    if (!booleanArray[i].value) {
+      setTimeout(() => { // Use arrow function to preserve the correct scope
+        loadCheck(booleanArray);
+      }, 50);
+      console.log('images loading');
+      return;
+    }
+    if (!humo_load) {      setTimeout(() => { // Use arrow function to preserve the correct scope
+        loadCheck(booleanArray);
+      }, 50);
+}
+  }
+  console.log('images loaded');
+  console.log("func scale called")
+  scale();
+  
+  Render(); // All images are loaded, start rendering
+}
+
+screenAdjust();
+window.addEventListener('resize', screenAdjust);
+  if(bar_state === 0) {animateText()};
+loadCheck(booleanArray);
+
+
+</script>
+</body>
+</html>
